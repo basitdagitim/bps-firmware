@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+version="1.0"
+name="fw-qcom"
+depends="glibc,readline,ncurses"
+description="GNU/Linux fw"
+source=""
+groups="app.shell"
+setup()
+{
+	cd $SOURCEDIR
+	
+}
+build()
+{
+	#make
+	echo "" 
+}
+package()
+{
+	mkdir -p $DESTDIR/lib/firmware
+	cp -prfv /tmp/bps/files/* $DESTDIR/lib/firmware
+}
+
+
